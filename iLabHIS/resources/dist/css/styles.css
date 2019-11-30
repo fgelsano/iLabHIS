@@ -9,3 +9,8 @@
     height: 100vh;
     background-size: cover;
 }
+
+#lab-request-list{
+    overflow-y: auto;
+    height: 400px;
+}
