@@ -28,6 +28,10 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <!-- Favicon -->
   <link rel="icon" href="../dist/img/iLabHIS-logo.ico" type="image/ico" sizes="16x16">
+  <!-- Date Picker CSS -->
+  <link rel="stylesheet" href="../plugins/datepicker/jquery-ui.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="../dist/css/styles.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -111,12 +115,6 @@
               <p>Lab Test Requests</p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="settings.html" class="nav-link">
-              <i class="nav-icon fas fa-cogs"></i>
-              <p>Settings</p>
-            </a>
-          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -153,15 +151,16 @@
               <th>#</th>
               <th>Last Name</th>
               <th>First Name</th>
-              <th>Middle Initial</th>
+              <th>M.I.</th>
               <th>Address</th>
               <th>Birthday</th>
               <th>Age</th>
               <th>Gender</th>
+              <th>Action</th>
             </thead>
             <tbody style="height: 50vh; overflow-y: auto;">
               <tr>
-                <td>1</td>
+                <td><input type="checkbox" name="" id=""></td>
                 <td>Gatoc</td>
                 <td>Analyn</td>
                 <td>A</td>
@@ -169,69 +168,233 @@
                 <td>12/31/1993</td>
                 <td>26</td>
                 <td>Female</td>
+                <td class="text-center">
+                  <a href="" data-toggle="modal" data-target="#editPatient"><i class="fas fa-edit" title="Edit Patient"></i></a>
+                  <a href=""><i class="fas fa-trash text-danger" title="Delete Patient"></i></a>
+                  <!-- Modal -->
+                  <div class="modal fade" id="editPatient" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Edit Patient</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="row">
+                            <div class="col-12 col-sm-4 col-md-4">
+                              <img src="../dist/img/user5-128x128.jpg" class="img-responsive">
+                            </div>
+                            <div class="col-12 col-sm-8 col-md-8">
+                                <form>
+                                  <div class="form-group">
+                                    <input type="text" class="form-control" id="" placeholder="First Name" value="Analyn">
+                                  </div>
+                                  <div class="form-group">
+                                    <input type="text" class="form-control" id="" placeholder="Last Name" value="Gatoc">
+                                  </div>
+                                  <div class="form-group">
+                                    <input type="text" class="form-control" id="" placeholder="Middle Name" value="Aria">
+                                  </div>
+                            </div>
+                          </div>
+                          <!-- <div class="row"> -->
+                                <div class="form-group">
+                                  <textarea name="" id="" cols="30" rows="5" class="form-control" placeholder="Complete Address">Brgy. Magnangoy, Hilongos, Leyte	</textarea>
+                                </div>
+                                <div class="row">
+                                  <div class="form-group col-8 col-sm-4 col-md-4">
+                                    <input type="text" id="editBday" class="form-control" placeholder="Birth Day" value="12/31/1993">
+                                  </div>
+                                  <div class="form-group col-8 col-sm-4 col-md-2">
+                                    <input type="text" id="age" class="form-control" placeholder="Age" value="26">
+                                  </div>
+                                  <div class="form-group clearfix col-12 col-sm-4 col-md-6 pt-2">
+                                    <div class="icheck-primary d-inline">
+                                      <input type="radio" id="radioPrimary1" name="r1">
+                                      <label for="radioPrimary1">Male
+                                      </label>
+                                    </div>
+                                    <div class="icheck-primary d-inline">
+                                      <input type="radio" id="radioPrimary2" name="r1" checked="">
+                                      <label for="radioPrimary2">Female
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row px-2">
+                                  <div class="input-group">
+                                    <div class="custom-file">
+                                      <input type="file" class="custom-file-input" id="exampleInputFile">
+                                      <label class="custom-file-label" for="exampleInputFile">Update Patient's Image</label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </form>
+                          <!-- </div> -->
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-primary">Save</button>
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
               </tr>
               <tr>
-                <td>2</td>
-                <td>Gatoc</td>
-                <td>Analyn</td>
-                <td>A</td>
-                <td>Brgy. Magnangoy, Hilongos, Leyte</td>
-                <td>12/31/1993</td>
-                <td>26</td>
-                <td>Female</td>
+                <td><input type="checkbox" name="" id=""></td>
+                <td>Corporal</td>
+                <td>Max Jesus</td>
+                <td>S</td>
+                <td>Kalentong, Daang Bakal, Mandaluyong City</td>
+                <td>10/24/1976</td>
+                <td>42</td>
+                <td>Male</td>
+                <td class="text-center">
+                  <a href="" data-toggle="modal" data-target="#editPatient"><i class="fas fa-edit" title="Edit Patient"></i></a>
+                  <a href=""><i class="fas fa-trash text-danger" title="Delete Patient"></i></a>
+                </td>
               </tr>
               <tr>
-                <td>3</td>
-                <td>Gatoc</td>
-                <td>Analyn</td>
-                <td>A</td>
-                <td>Brgy. Magnangoy, Hilongos, Leyte</td>
-                <td>12/31/1993</td>
-                <td>26</td>
+                <td><input type="checkbox" name="" id=""></td>
+                <td>Arcilla</td>
+                <td>Heather Neiva</td>
+                <td>Y</td>
+                <td>Luna Street, Binondo, Manila</td>
+                <td>12/15/1977</td>
+                <td>41</td>
                 <td>Female</td>
+                <td class="text-center">
+                  <a href="" data-toggle="modal" data-target="#editPatient"><i class="fas fa-edit" title="Edit Patient"></i></a>
+                  <a href=""><i class="fas fa-trash text-danger" title="Delete Patient"></i></a>
+                </td>
               </tr>
               <tr>
-                <td>4</td>
-                <td>Gatoc</td>
-                <td>Analyn</td>
-                <td>A</td>
-                <td>Brgy. Magnangoy, Hilongos, Leyte</td>
+                <td><input type="checkbox" name="" id=""></td>
+                <td>Rendón</td>
+                <td>Callie Cynthia</td>
+                <td>M</td>
+                <td>Building 32, Shaw Bouleverd, Mandaluyong City</td>
                 <td>12/31/1993</td>
-                <td>26</td>
+                <td>25</td>
                 <td>Female</td>
+                <td class="text-center">
+                  <a href="" data-toggle="modal" data-target="#editPatient"><i class="fas fa-edit" title="Edit Patient"></i></a>
+                  <a href=""><i class="fas fa-trash text-danger" title="Delete Patient"></i></a>
+                </td>
               </tr>
               <tr>
-                <td>5</td>
-                <td>Gatoc</td>
-                <td>Analyn</td>
-                <td>A</td>
-                <td>Brgy. Magnangoy, Hilongos, Leyte</td>
-                <td>12/31/1993</td>
-                <td>26</td>
-                <td>Female</td>
+                <td><input type="checkbox" name="" id=""></td>
+                <td>Isidro</td>
+                <td>Gideon Alfonso</td>
+                <td>P</td>
+                <td>Regina Building, Escolta, Binondo, Manila</td>
+                <td>1/14/1973</td>
+                <td>46</td>
+                <td>Male</td>
+                <td class="text-center">
+                  <a href="" data-toggle="modal" data-target="#editPatient"><i class="fas fa-edit" title="Edit Patient"></i></a>
+                  <a href=""><i class="fas fa-trash text-danger" title="Delete Patient"></i></a>
+                </td>
               </tr>
               <tr>
-                <td>6</td>
-                <td>Gatoc</td>
-                <td>Analyn</td>
+                <td><input type="checkbox" name="" id=""></td>
+                <td>Cereza</td>
+                <td>Braxton Jefferson</td>
                 <td>A</td>
                 <td>Brgy. Magnangoy, Hilongos, Leyte</td>
-                <td>12/31/1993</td>
-                <td>26</td>
-                <td>Female</td>
+                <td>11/26/1970</td>
+                <td>49</td>
+                <td>Male</td>
+                <td class="text-center">
+                  <a href="" data-toggle="modal" data-target="#editPatient"><i class="fas fa-edit" title="Edit Patient"></i></a>
+                  <a href=""><i class="fas fa-trash text-danger" title="Delete Patient"></i></a>
+                </td>
               </tr>
               <tr>
-                <td>7</td>
-                <td>Gatoc</td>
-                <td>Analyn</td>
-                <td>A</td>
-                <td>Brgy. Magnangoy, Hilongos, Leyte</td>
-                <td>12/31/1993</td>
-                <td>26</td>
-                <td>Female</td>
+                <td><input type="checkbox" name="" id=""></td>
+                <td>Mendoza</td>
+                <td>Jade Xaviera</td>
+                <td>M</td>
+                <td>Jovan Avenue, Shaw Boulevard, Mandaluyong City</td>
+                <td>11/13/1980</td>
+                <td>39</td>
+                <td>Male</td>
+                <td class="text-center">
+                  <a href="" data-toggle="modal" data-target="#editPatient"><i class="fas fa-edit" title="Edit Patient"></i></a>
+                  <a href=""><i class="fas fa-trash text-danger" title="Delete Patient"></i></a>
+                </td>
               </tr>
             </tbody>
           </table>
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-3 offset-sm-9 col-md-2 offset-md-10">
+            <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#newPatient"><i class="fas fa-plus mr-2"></i>New Patient</button>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="newPatient" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Add New Patient</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First Name">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Last Name">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Middle Name">
+                    </div>
+                    <div class="form-group">
+                      <textarea name="" id="" cols="30" rows="5" class="form-control" placeholder="Complete Address"></textarea>
+                    </div>
+                    <div class="row">
+                      <div class="form-group col-8 col-sm-4 col-md-4">
+                        <input type="text" id="bday" class="form-control" placeholder="Birth Day">
+                      </div>
+                      <div class="form-group col-8 col-sm-4 col-md-2">
+                        <input type="text" id="age" class="form-control" placeholder="Age">
+                      </div>
+                      <div class="form-group clearfix col-12 col-sm-4 col-md-6 pt-2">
+                          <div class="icheck-primary d-inline">
+                            <input type="radio" id="radioPrimary3" name="r1">
+                            <label for="radioPrimary3">Male
+                            </label>
+                          </div>
+                          <div class="icheck-primary d-inline">
+                            <input type="radio" id="radioPrimary4" name="r1">
+                            <label for="radioPrimary4">Female
+                            </label>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="row px-2">
+                      <div class="input-group">
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="exampleInputFile">
+                          <label class="custom-file-label" for="exampleInputFile">Upload Patient's Image</label>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary">Save</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div><!-- /.container-fluid -->
     </section>
@@ -288,5 +451,12 @@
 <script src="../dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../dist/js/demo.js"></script>
+<script src="../plugins/datepicker/jquery-ui.js"></script>
+<script>
+  $( function() {
+    $("#bday" ).datepicker();
+    $("editBday").datepicker();
+  } );
+  </script>
 </body>
 </html>

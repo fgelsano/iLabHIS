@@ -28,6 +28,10 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <!-- Favicon -->
   <link rel="icon" href="../dist/img/iLabHIS-logo.ico" type="image/ico" sizes="16x16">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="../dist/css/styles.css">
+  <!-- Print JS -->
+  <link rel="stylesheet" href="../dist/css/print.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -111,12 +115,6 @@
               <p>Lab Test Requests</p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="settings.html" class="nav-link">
-              <i class="nav-icon fas fa-cogs"></i>
-              <p>Settings</p>
-            </a>
-          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -148,7 +146,376 @@
     <section class="content">
       <div class="container-fluid">
         
+        <div class="row">
+          <section class="col-9">
+            <!-- TO DO List -->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">
+                  <i class="ion ion-clipboard mr-1"></i>
+                  Lab Test Requests
+                </h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body" id="lab-request-list">
+                <ul class="todo-list" data-widget="todo-list">
+                  <li>
+                    <!-- drag handle -->
+                    <span class="handle">
+                      <i class="fas fa-ellipsis-v"></i>
+                      <i class="fas fa-ellipsis-v"></i>
+                    </span>
+                    <!-- checkbox -->
+                    <div  class="icheck-primary d-inline ml-2">
+                      <input type="checkbox" value="" name="todo1" id="todoCheck1">
+                      <label for="todoCheck1"></label>
+                    </div>
+                    <!-- todo text -->
+                    <span class="text">[OR12345] Complete Blood Count (CBC) | Patient: Mr. Rowdrigow Dutwerte</span>
+                    <!-- Emphasis label -->
+                    <small class="badge badge-danger"><i class="far fa-clock"></i> 2 mins</small>
+                    <!-- General tools such as edit or delete-->
+                    <div class="tools">
+                      <i class="fas fa-edit"></i>
+                      <i class="fas fa-trash"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="handle">
+                      <i class="fas fa-ellipsis-v"></i>
+                      <i class="fas fa-ellipsis-v"></i>
+                    </span>
+                    <div  class="icheck-primary d-inline ml-2">
+                      <input type="checkbox" value="" name="todo2" id="todoCheck2" checked>
+                      <label for="todoCheck2"></label>
+                    </div>
+                    <span class="text">[OR09876] Urinalysis | Patient: Mr. Bwong Gow</span>
+                    <small class="badge badge-info"><i class="far fa-clock"></i> 4 hours</small>
+                    <div class="tools">
+                      <i class="fas fa-edit"></i>
+                      <i class="fas fa-trash"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="handle">
+                      <i class="fas fa-ellipsis-v"></i>
+                      <i class="fas fa-ellipsis-v"></i>
+                    </span>
+                    <div  class="icheck-primary d-inline ml-2">
+                      <input type="checkbox" value="" name="todo3" id="todoCheck3">
+                      <label for="todoCheck3"></label>
+                    </div>
+                    <span class="text">[OR45678] RAPID Test | Patient: Ms. Leniling Aborido</span>
+                    <small class="badge badge-warning"><i class="far fa-clock"></i> 1 day</small>
+                    <div class="tools">
+                      <i class="fas fa-edit"></i>
+                      <i class="fas fa-trash"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <!-- drag handle -->
+                    <span class="handle">
+                      <i class="fas fa-ellipsis-v"></i>
+                      <i class="fas fa-ellipsis-v"></i>
+                    </span>
+                    <!-- checkbox -->
+                    <div  class="icheck-primary d-inline ml-2">
+                      <input type="checkbox" value="" name="todo4" id="todoCheck4">
+                      <label for="todoCheck4"></label>
+                    </div>
+                    <!-- todo text -->
+                    <span class="text">[OR456159] Fasting Blood Sugar (FBS) | Patient: Mr. Rowdrigow Dutwerte</span>
+                    <!-- Emphasis label -->
+                    <small class="badge badge-danger"><i class="far fa-clock"></i> 2 mins</small>
+                    <!-- General tools such as edit or delete-->
+                    <div class="tools">
+                      <i class="fas fa-edit"></i>
+                      <i class="fas fa-trash"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="handle">
+                      <i class="fas fa-ellipsis-v"></i>
+                      <i class="fas fa-ellipsis-v"></i>
+                    </span>
+                    <div  class="icheck-primary d-inline ml-2">
+                      <input type="checkbox" value="" name="todo2" id="todoCheck5" checked>
+                      <label for="todoCheck5"></label>
+                    </div>
+                    <span class="text">[OR321951] Creatinine Blood Test | Patient: Mr. Bwong Gow</span>
+                    <small class="badge badge-info"><i class="far fa-clock"></i> 4 hours</small>
+                    <div class="tools">
+                      <i class="fas fa-edit"></i>
+                      <i class="fas fa-trash"></i>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="handle">
+                      <i class="fas fa-ellipsis-v"></i>
+                      <i class="fas fa-ellipsis-v"></i>
+                    </span>
+                    <div  class="icheck-primary d-inline ml-2">
+                      <input type="checkbox" value="" name="todo3" id="todoCheck6">
+                      <label for="todoCheck6"></label>
+                    </div>
+                    <span class="text">[OR258753] RAPID Test | Patient: Ms. Leniling Aborido</span>
+                    <small class="badge badge-warning"><i class="far fa-clock"></i> 1 day</small>
+                    <div class="tools">
+                      <i class="fas fa-edit"></i>
+                      <i class="fas fa-trash"></i>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#newlabrequest"><i class="fas fa-plus"></i> New Lab Test Request</button>
+              </div>
+            </div>
+            <!-- /.card -->
+
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">
+                  <i class="fas fa-file-invoice"></i>
+                  Test Results
+                </h3>
+              </div>
+                <!-- /.card-header -->
+              <div class="card-body" id="lab-request-list">
+                <ul class="todo-list" data-widget="">
+                  <li>
+                    <span class="text">[OR09876] Urinalysis | Patient: Mr. Bwong Gow</span>
+                    <small class="badge badge-info"><i class="far fa-clock"></i> 4 hours</small>
+                    <a href="#" data-toggle="modal" data-target="#labresult" class="badge badge-warning"><i class="fas fa-eye pr-2" title="View Test Result"></i>View Lab Result</a>
+                  </li>
+                  <li>
+                    <span class="text">[OR321951] Creatinine Blood Test | Patient: Mr. Bwong Gow</span>
+                    <small class="badge badge-info"><i class="far fa-clock"></i> 4 hours</small>
+                    <a href="#" data-toggle="modal" data-target="#labresult" class="badge badge-warning"><i class="fas fa-eye pr-2" title="View Test Result"></i>View Lab Result</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="labresult" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Urinalysis Lab Test Result for Mr. Bwong Gow</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div id="testResultFormView" class="border">
+                            <div class="row p-3">
+                              <div class="col-6">
+                                <img src="../dist/img/iLabHIS-logo.png" alt="iLabHIS Logo" class="brand-image img-circle elevation-3" style="opacity: .8" width="20%">
+                                <span class="brand-text font-weight-light">iLabHIS</span>
+                              </div>
+                              <div class="col-6">
+                                <small>Main Clinic Address One</small>
+                                <small class="mt-0">Unknown City, Province of Everywhere</small>
+                              </div>
+                            </div>
+                            <div class="row border m-1">
+                              <div class="col-12">
+                                  <p class="m-0"><strong>Name: </strong> Bwong Gow</p>
+                                  <p class="m-0"><strong>Address :</strong> Malacañang Palace, Metro Manila</p>
+                                  <p class="m-0"><strong>Doctor :</strong> Dr. Neufranco Niño Zamoras</p>
+                                  <p class="m-0"><strong>Sample :</strong> 022</p>
+                                  <p class="m-0"><strong>Received :</strong> 2019/11/30 10:24:38</p>
+                                  <p class="m-0"><strong>Processed :</strong> 2019/11/31 13:04:58</p>
+                              </div>
+                            </div>
+                            <div class="row m-1">
+                              <table class="table table-bordered table-striped table-sm table-hover">
+                                <thead>
+                                  <th>Parameters</th>
+                                  <th>Units</th>
+                                  <th>References</th>
+                                  <th>value</th>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Color</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Appearance</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Reaction</td>
+                                    <td></td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Specific Gravity</td>
+                                    <td></td>
+                                    <td>1.003</td>
+                                    <td>1.035</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Protein</td>
+                                    <td>mg/dL</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Glucose</td>
+                                    <td>mg/dL</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Urine Leucocytes</td>
+                                    <td>Leu/uL</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Ketone</td>
+                                    <td>mg/dL</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Urobilinogen</td>
+                                    <td>mg/dL</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Nitrites</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Urine Blood</td>
+                                    <td>Fry/ul</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Bilinubin</td>
+                                    <td>mg/dL</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                  </tr> 
+                                </tbody>
+                              </table>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" onclick="printJS({printable: 'testResultForm', css: '../dist/css/adminlte.min.css', type: 'html'});">Print</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
+          </section>
+          <!-- right col -->
+          <div class="col-3">
+            <div class="row">
+                <div class="col-12">
+                  <!-- small box -->
+                  <div class="small-box bg-info">
+                    <div class="inner">
+                      <h3>15</h3>
+                      <p>CBC Requests</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-12">
+                  <!-- small box -->
+                  <div class="small-box bg-success">
+                    <div class="inner">
+                      <h3>53<sup style="font-size: 20px">%</sup></h3>
+                      <p>Urinalysis Requests</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-12">
+                  <!-- small box -->
+                  <div class="small-box bg-warning">
+                    <div class="inner">
+                      <h3>19</h3>
+                      <p>FBS Requests</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-12">
+                  <!-- small box -->
+                  <div class="small-box bg-danger">
+                    <div class="inner">
+                      <h3>35</h3>
+      
+                      <p>CREA Requests</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-12">
+                  <!-- small box -->
+                  <div class="small-box bg-primary">
+                    <div class="inner">
+                      <h3>23</h3>
+                      <p>BUA Requests</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-12">
+                  <!-- small box -->
+                  <div class="small-box bg-secondary">
+                    <div class="inner">
+                      <h3>13<sup style="font-size: 20px">%</sup></h3>
+      
+                      <p>LIPID PANEL Requests</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-12">
+                  <!-- small box -->
+                  <div class="small-box bg-light">
+                    <div class="inner">
+                      <h3>39</h3>
+      
+                      <p>HBSAg Requests</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- ./col -->
+                <div class="col-12">
+                  <!-- small box -->
+                  <div class="small-box bg-dark">
+                    <div class="inner">
+                      <h3>5</h3>
+                      <p>SERUM POTASSIUM Requests</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- ./col -->
+              </div>
+          </div>
+        </div>
+
       </div><!-- /.container-fluid -->
+      
     </section>
     <!-- /.content -->
   </div>
@@ -166,6 +533,114 @@
     <!-- Control sidebar content goes here -->
   </aside>
   <!-- /.control-sidebar -->
+</div>
+<div class="row" style="display: none;">
+    <div id="testResultForm" class="border">
+      <div class="row p-3">
+        <div class="col-6">
+          <img src="../dist/img/iLabHIS-logo.png" alt="iLabHIS Logo" class="brand-image img-circle elevation-3" style="opacity: .8" width="20%">
+          <span class="brand-text font-weight-light">iLabHIS</span>
+        </div>
+        <div class="col-6">
+          <small>Main Clinic Address One</small><br>
+          <small class="mt-0">Unknown City, Province of Everywhere</small>
+        </div>
+      </div>
+      <div class="row border m-1">
+        <div class="col-12">
+            <p class="m-0"><strong>Name: </strong> Bwong Gow</p>
+            <p class="m-0"><strong>Address :</strong> Malacañang Palace, Metro Manila</p>
+            <p class="m-0"><strong>Doctor :</strong> Dr. Neufranco Niño Zamoras</p>
+            <p class="m-0"><strong>Sample :</strong> 022</p>
+            <p class="m-0"><strong>Received :</strong> 2019/11/30 10:24:38</p>
+            <p class="m-0"><strong>Processed :</strong> 2019/11/31 13:04:58</p>
+        </div>
+      </div>
+      <div class="row m-1">
+        <table class="table table-bordered table-striped table-sm table-hover">
+          <thead>
+            <th>Parameters</th>
+            <th>Units</th>
+            <th>References</th>
+            <th>value</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Color</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Appearance</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Reaction</td>
+              <td></td>
+              <td>5</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>Specific Gravity</td>
+              <td></td>
+              <td>1.003</td>
+              <td>1.035</td>
+            </tr>
+            <tr>
+              <td>Protein</td>
+              <td>mg/dL</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Glucose</td>
+              <td>mg/dL</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Urine Leucocytes</td>
+              <td>Leu/uL</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Ketone</td>
+              <td>mg/dL</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Urobilinogen</td>
+              <td>mg/dL</td>
+              <td>0</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Nitrites</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Urine Blood</td>
+              <td>Fry/ul</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Bilinubin</td>
+              <td>mg/dL</td>
+              <td>0</td>
+              <td>0</td>
+            </tr> 
+          </tbody>
+        </table>
+      </div>
+  </div>
 </div>
 <!-- ./wrapper -->
 
@@ -203,5 +678,37 @@
 <script src="../dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../dist/js/demo.js"></script>
+<!-- Print JS -->
+<script src="../dist/js/print.min.js"></script>
+<script>
+  // Get the input field
+  let input = document.getElementById("OR_no");
+
+  // Execute a function when the user releases a key on the keyboard
+  input.addEventListener("keydown", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13 || event.keyCode === 9) {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // Trigger the button element with a click
+      document.getElementById("full_name").value = 'Rowdrigow Dutwerte';
+      document.getElementById("lab-tests").style.display = 'block';
+    } 
+  });
+
+  input.addEventListener("blur", function(event){
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // Trigger the button element with a click
+      document.getElementById("full_name").value = 'Rowdrigow Dutwerte';
+      document.getElementById("lab-tests").style.display = 'block';
+  });
+
+  $("#newlabrequest").on("hidden.bs.modal", function(){
+    $("#OR_no").val("")
+    $("#full_name").val("");
+    $("#lab-tests").hide();
+  });
+</script>
 </body>
 </html>
